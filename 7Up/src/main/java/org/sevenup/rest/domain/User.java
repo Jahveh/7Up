@@ -1,5 +1,5 @@
 package org.sevenup.rest.domain;
 
-public class User {
+public abstract class User {
 
 }
