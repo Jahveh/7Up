@@ -15,6 +15,7 @@ public class Customer implements User {
 	private String streetAdress;
 	private String city;
 	private String postalCode;
+	
 //-----------------------------------------------
 	public String getName() {
 		return name;
