@@ -12,7 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @Controller
-@RequestMapping("7up/login")
 public class LoginController {
     private static Logger LOG = LoggerFactory.getLogger(LoginController.class);
+    @RequestMapping("7Up/login")
+    public void seven(){
+    	System.out.println("seven");
+    	System.out.println("seven");
+    }
 }
