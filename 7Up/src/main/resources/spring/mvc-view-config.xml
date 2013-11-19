@@ -24,7 +24,7 @@
 			    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 			        <!-- Example: a logical view name of 'vets' is mapped to '/WEB-INF/jsp/vets.jsp' -->
 			        <property name="prefix" value="/WEB-INF/pages/"/>
-			        <property name="suffix" value=".jsp"/>
+			        <property name="suffix" value=".html"/>
 			    </bean>
 			
 			    <!-- Used here for 'xml' and 'atom' views  -->
