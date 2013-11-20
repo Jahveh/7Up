@@ -5,4 +5,13 @@ package org.sevenup.core.domain.item;
  *
  */
 public abstract class Item {
+	private String description;
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 }

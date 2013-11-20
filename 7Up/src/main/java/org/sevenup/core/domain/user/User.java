@@ -6,12 +6,17 @@ package org.sevenup.core.domain.user;
  * 
  */
 public abstract class User {
+	//User Name for show
 	private String name;
-
+	//Email and Password for login
 	private String email;
+	private String password;
+	//Some authentications use
 	private String mobilePhone;
+	//Some base informations
 	private String streetAdress;
 	private String city;
+	private String country;
 	private String postalCode;
 
 	public String getName() {
@@ -60,5 +65,21 @@ public abstract class User {
 
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 }

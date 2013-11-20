@@ -7,25 +7,33 @@
          http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- - The ContentNegotiatingViewResolver delegates to the InternalResourceViewResolver 
-		and BeanNameViewResolver, - and uses the requested media type (determined 
-		by the path extension) to pick a matching view. - When the media type is 
-		'text/html', it will delegate to the InternalResourceViewResolver's JstlView, 
-		- otherwise to the BeanNameViewResolver. -->
+		   and BeanNameViewResolver, - and uses the requested media type (determined 
+		   by the path extension) to pick a matching view. - When the media type is 
+		  'text/html', it will delegate to the InternalResourceViewResolver's JstlView, 
+		   - otherwise to the BeanNameViewResolver. -->
 	<bean
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="contentNegotiationManager" ref="cnManager" />
-
 		<property name="viewResolvers">
 			<list>
-				<!-- Default viewClass: JSTL view (JSP with html output) -->
+				<!-- Default viewClass: JSTL view (html output) -->
 				<bean
 					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 					<!-- Example: a logical view name of 'sevenup' is mapped to '/WEB-INF/pages/sevenup.html' -->
 					<property name="prefix" value="/WEB-INF/pages/" />
 					<property name="suffix" value=".html" />
 				</bean>
-				<!-- Used here for 'xml' and 'atom' views <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" 
-					/> -->
+				<!-- JSON -->
+				<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+				<!-- XML -->
+				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
+					<constructor-arg>
+						<bean class="org.springframework.oxm.xstream.XStreamMarshaller">
+							<property name="autodetectAnnotations" value="true" />
+						</bean>
+					</constructor-arg>
+				</bean>
+				<!-- Used here for 'xml' and 'atom' views <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/> -->
 			</list>
 		</property>
 	</bean>
@@ -36,7 +44,6 @@
 		<property name="favorPathExtension" value="true" />
 		<property name="ignoreAcceptHeader" value="true" />
 		<property name="defaultContentType" value="text/html" />
-
 		<property name="mediaTypes">
 			<map>
 				<entry key="html" value="text/html" />
@@ -44,22 +51,6 @@
 				<entry key="json" value="application/json" />
 				<entry key="atom" value="application/atom+xml" />
 			</map>
-		</property>
-
-		<property name="defaultViews">
-			<list>
-				<!-- JSON -->
-				<bean
-					class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
-				<!-- XML -->
-				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
-					<constructor-arg>
-						<bean class="org.springframework.oxm.xstream.XStreamMarshaller">
-							<property name="autodetectAnnotations" value="true" />
-						</bean>
-					</constructor-arg>
-				</bean>
-			</list>
 		</property>
 	</bean>
 
