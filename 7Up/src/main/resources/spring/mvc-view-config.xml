@@ -17,8 +17,7 @@
 		<property name="viewResolvers">
 			<list>
 				<!-- Default viewClass: JSTL view (html output) -->
-				<bean
-					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+				<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 					<!-- Example: a logical view name of 'sevenup' is mapped to '/WEB-INF/pages/sevenup.html' -->
 					<property name="prefix" value="/WEB-INF/pages/" />
 					<property name="suffix" value=".html" />
@@ -33,7 +32,8 @@
 						</bean>
 					</constructor-arg>
 				</bean>
-				<!-- Used here for 'xml' and 'atom' views <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/> -->
+				<!-- Used here for 'xml' and 'atom' views--> 
+				<bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/> 
 			</list>
 		</property>
 	</bean>
