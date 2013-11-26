@@ -22,9 +22,10 @@
 					<property name="prefix" value="/WEB-INF/pages/" />
 					<property name="suffix" value=".html" />
 				</bean>
-				<!-- JSON -->
+				<!-- JSON 
 				<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
-				<!-- XML -->
+				-->
+				<!-- XML 
 				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
 					<constructor-arg>
 						<bean class="org.springframework.oxm.xstream.XStreamMarshaller">
@@ -32,6 +33,7 @@
 						</bean>
 					</constructor-arg>
 				</bean>
+				-->
 				<!-- Used here for 'xml' and 'atom' views--> 
 				<bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/> 
 			</list>
