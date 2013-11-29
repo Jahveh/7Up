@@ -1,4 +1,4 @@
-package org.sevenup.core.domain.account;
+package org.sevenup.core.domain.help.account;
 
 /**
  * 
