@@ -1,11 +1,11 @@
-package org.sevenup.core.domain.user;
+package org.sevenup.core.domain.account;
 
 /**
  * 
  * @author steven
  * 
  */
-public abstract class User {
+public abstract class Account {
 	//User Name for show
 	private String name;
 	//Email and Password for login

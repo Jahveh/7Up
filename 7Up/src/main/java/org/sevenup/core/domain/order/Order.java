@@ -1,6 +1,6 @@
 package org.sevenup.core.domain.order;
 
-import org.sevenup.core.domain.user.User;
+import org.sevenup.core.domain.account.Account;
 
 import java.util.*;
 
@@ -9,7 +9,7 @@ public class Order {
   private final Date dateTimeOfSubmission;
   private Map<String, Integer> orderItems;
   private final UUID key;
-  private User user;
+  private Account user;
 
   private OrderStatus status;
   private List<OrderStatus> statusHistory;

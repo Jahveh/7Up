@@ -1,11 +1,11 @@
-package org.sevenup.core.domain.user;
+package org.sevenup.core.domain.account;
 
 /**
  * 
  * @author steven
  * 
  */
-public class Customer extends User {
+public class Customer extends Account {
 	private int age;
 //	private boolean sex;
 	private String profession;
