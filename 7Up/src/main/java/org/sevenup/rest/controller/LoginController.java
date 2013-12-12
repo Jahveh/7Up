@@ -6,6 +6,8 @@ import java.util.List;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.sevenup.rest.domain.Customer;
+import org.sevenup.rest.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -28,10 +30,15 @@ public class LoginController {
     @RequestMapping("7Up/login")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    public List<String> login(){
-    	List<String> results = new ArrayList<String>();
-    	results.add("one");
-    	results.add("two");
+    public List<Customer> login(){
+    	List<Customer> results = new ArrayList<Customer>();
+    	for(int i=0;i<5;i++){
+    		Customer customer= new Customer();
+    		customer.setAge(i+20);
+    		customer.setLooks("seven"+i);
+    		customer.setName("number"+i);
+    		results.add(customer);
+    	}
     	return results;
     }
 }

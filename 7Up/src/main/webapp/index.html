@@ -10,13 +10,43 @@
 <link rel="shortcut icon" href="resources/ico/7UpLogo.jpg">
 
 <title>index</title>
-<script type="text/javascript" src="resources/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="resources/js/jquery-1.10.2.min.js">
+</script>
+<script type="text/javascript">
+function test(){
+	var myformselector = "#myForm";
+	//hang on event of form with id=myform
+	$(myformselector).submit(function(e) {
+
+	    //prevent Default functionality
+	    e.preventDefault();
+
+	    //get the action-url of the form
+	    var actionurl = e.currentTarget.action;
+	    //do your own request an handle the results
+	     $.ajax({
+	    	    headers: { 
+	    	        Accept : "application/xml; charset=utf-8",
+	    	        "Content-Type": "application/xml; charset=utf-8"
+	    	    }
+	            url: actionurl,
+	            type: 'post',
+	            dataType: 'json',
+	            data: $(myformselector).serialize(),
+	            success: function(data) {
+	                       alert(data);
+	                     }
+	        });
+
+	});
+}
+</script>
 </head>
 <body>
-<form action="7Up/login">
+<form action="7Up/login"  id="myForm" method="post">
         <input type="text">
         <input type="password">
-        <button type="submit">Submit</button>
+        <button onclick="test();">Submit</button>
 </form>
 </body>
 </html>

@@ -84,7 +84,12 @@
 			<version>1.4.5</version>
 		</dependency>
             
-            
+		<dependency>
+			<groupId>org.springframework.hateoas</groupId>
+			<artifactId>spring-hateoas</artifactId>
+			<version>0.7.0.RELEASE</version>
+		</dependency>
+		            
 		<!-- used for EhCacheCacheManager -->
 		<dependency>
 			<groupId>org.springframework</groupId>
