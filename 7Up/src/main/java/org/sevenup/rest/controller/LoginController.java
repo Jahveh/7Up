@@ -1,13 +1,19 @@
 package org.sevenup.rest.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 
 /**
@@ -20,9 +26,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class LoginController {
     private static Logger LOG = LoggerFactory.getLogger(LoginController.class);
     @RequestMapping("7Up/login")
-    public String login(){
-    	System.out.println("seven");
-    	System.out.println("seven");
-    	return "welcome";
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public List<String> login(){
+    	List<String> results = new ArrayList<String>();
+    	results.add("one");
+    	results.add("two");
+    	return results;
     }
 }
