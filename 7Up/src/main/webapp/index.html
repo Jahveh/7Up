@@ -25,13 +25,9 @@ function test(){
 	    var actionurl = e.currentTarget.action;
 	    //do your own request an handle the results
 	     $.ajax({
-	    	    headers: { 
-	    	        Accept : "application/xml; charset=utf-8",
-	    	        "Content-Type": "application/xml; charset=utf-8"
-	    	    }
 	            url: actionurl,
 	            type: 'post',
-	            dataType: 'json',
+	            dataType: 'xml',
 	            data: $(myformselector).serialize(),
 	            success: function(data) {
 	                       alert(data);
@@ -43,7 +39,7 @@ function test(){
 </script>
 </head>
 <body>
-<form action="7Up/login"  id="myForm" method="post">
+<form action="7Up/loginseven"  id="myForm" method="post">
         <input type="text">
         <input type="password">
         <button onclick="test();">Submit</button>
