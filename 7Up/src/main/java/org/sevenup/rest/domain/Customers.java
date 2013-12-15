@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlAccessorType;
 @XmlAccessorType (XmlAccessType.FIELD)
 public class Customers{
 	@XmlElement(name = "customer")
-    protected List<Customer> list;
+    protected List<Account> list;
 
     public Customers(){}
 
-	public List<Customer> getList() {
+	public List<Account> getList() {
 		return list;
 	}
 
-	public void setList(List<Customer> list) {
+	public void setList(List<Account> list) {
 		this.list = list;
 	}
 
