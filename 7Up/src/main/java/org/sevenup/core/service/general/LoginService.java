@@ -1,4 +1,4 @@
-package org.sevenup.core.service;
+package org.sevenup.core.service.general;
 /**
  * 
  * @author steven

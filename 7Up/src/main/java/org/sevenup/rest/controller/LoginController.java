@@ -74,18 +74,4 @@ public class LoginController {
         return list.get(0);
     }
     
-    @RequestMapping("7Up/loginhello")
-    public ResponseEntity<JaxbList> viewOrderseven() {
-    	List list=new ArrayList<Customer>();
-    	list.add("a");
-    	list.add("b");
-//    	for(int i=0;i<5;i++){
-//    		Customer customer= new Customer();
-//    		customer.setAge(i+20);
-//    		customer.setLooks("seven"+i);
-//    		customer.setName("number"+i);
-//    		list.add(customer);
-//    	}
-    	return new ResponseEntity<JaxbList>(new JaxbList(list), HttpStatus.OK);
-    }
 }
