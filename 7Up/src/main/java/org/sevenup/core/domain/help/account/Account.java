@@ -6,25 +6,44 @@ package org.sevenup.core.domain.help.account;
  * 
  */
 public abstract class Account {
-	//User Name for show
-	private String name;
-	//Email and Password for login
+	
+	private String accountName;
+	// User Name for show
+	private String firstName;
+	private String lastName;
+	// Email and Password for login
 	private String email;
 	private String password;
-	//Some authentications use
+	// Some authentications use
 	private String mobilePhone;
-	//Some base informations
+	// Some base informations
 	private String streetAdress;
 	private String city;
 	private String country;
-	private String postalCode;
+	private String postCode;
 
-	public String getName() {
-		return name;
+	public String getAccountName() {
+		return accountName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -33,6 +52,14 @@ public abstract class Account {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getMobilePhone() {
@@ -59,22 +86,6 @@ public abstract class Account {
 		this.city = city;
 	}
 
-	public String getPostalCode() {
-		return postalCode;
-	}
-
-	public void setPostalCode(String postalCode) {
-		this.postalCode = postalCode;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public String getCountry() {
 		return country;
 	}
@@ -82,4 +93,13 @@ public abstract class Account {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
+	public String getPostCode() {
+		return postCode;
+	}
+
+	public void setPostCode(String postCode) {
+		this.postCode = postCode;
+	}
+
 }

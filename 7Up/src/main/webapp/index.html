@@ -36,19 +36,23 @@
 			var actionurl = e.currentTarget.action;
 			//do your own request an handle the results
 			$.ajax({
-				url : actionurl+'?id=100101',
+				url : actionurl+'/100101',
 				type : 'post',
 				dataType : 'xml',
-				data : "<account><accountName>testseven</accountName><email>nonumber1989@gmail.com</email><password>nonumber1989</password></account>",
+				data : "<id>1111</id>",
 			    contentType: 'application/xml',
 			    mimeType: 'application/xml',
-				success : function(data) {
-					alert("seven1989"+data);
-				}
+			    success: function(data) { 
+			        alert(data.id + " " + data.name);
+			    },
+			    error:function(data,status,er) { 
+			        alert("error: "+data+" status: "+status+" er:"+er);
+			    }
 			});
 
 		});
 	}
+
 </script>
 </head>
 

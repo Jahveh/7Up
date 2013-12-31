@@ -7,6 +7,7 @@ import org.sevenup.rest.domain.Account;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,5 +29,12 @@ public class ShopsQueriesController {
 //    	Account account = new Account();
 //    	System.out.println(account.getPassword()+"---"+account.getEmail());
        return new ResponseEntity<Account>(account, HttpStatus.OK);
+    }
+    
+    @RequestMapping(method = RequestMethod.POST, value = "tiger/{id}")
+    public ResponseEntity<Account> test(@PathVariable String id ) {
+    	System.out.println("myid"+"----"+id);
+    	Account account = new Account();
+        return new ResponseEntity<Account>(account, HttpStatus.OK);
     }
 }
