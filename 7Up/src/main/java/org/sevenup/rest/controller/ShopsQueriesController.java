@@ -1,9 +1,32 @@
 package org.sevenup.rest.controller;
+
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.sevenup.rest.domain.Account;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 /**
  * 
  * @author steven
  * for shops query
  */
-public class ShopsQueriesController {
 
+@Controller
+@Produces(MediaType.APPLICATION_JSON)
+public class ShopsQueriesController {
+    @RequestMapping(method = RequestMethod.POST, value = "tiger")
+    public ResponseEntity<Account> deleteAccount(@RequestBody Account account ) {
+    	System.out.println(account.getAccountName());
+    	System.out.println(account.getEmail());
+    	System.out.println(account.getPassword());
+//    	Account account = new Account();
+//    	System.out.println(account.getPassword()+"---"+account.getEmail());
+       return new ResponseEntity<Account>(account, HttpStatus.OK);
+    }
 }

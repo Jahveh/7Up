@@ -36,10 +36,12 @@
 			var actionurl = e.currentTarget.action;
 			//do your own request an handle the results
 			$.ajax({
-				url : actionurl,
+				url : actionurl+'?id=100101',
 				type : 'post',
-				dataType : 'json',
-				data : $(myformselector).serialize(),
+				dataType : 'xml',
+				data : "<account><accountName>testseven</accountName><email>nonumber1989@gmail.com</email><password>nonumber1989</password></account>",
+			    contentType: 'application/xml',
+			    mimeType: 'application/xml',
 				success : function(data) {
 					alert("seven1989"+data);
 				}
@@ -54,7 +56,7 @@
 
     <div class="container">
 
-      <form class="form-signin"  action="login" id="seven">
+      <form class="form-signin"  action="tiger" id="seven">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input type="text" class="form-control" placeholder="Email address" required autofocus>
         <input type="password" class="form-control" placeholder="Password" required>
