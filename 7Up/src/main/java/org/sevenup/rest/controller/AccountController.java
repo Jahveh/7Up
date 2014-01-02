@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Produces(MediaType.APPLICATION_JSON)
 public class AccountController {
 
-	@RequestMapping(value="good",method=RequestMethod.GET)
+	@RequestMapping(value="good",method=RequestMethod.POST)
 	@ResponseBody
 	public List<Account> getList(){
 		List<Account> accounts = new ArrayList<Account>();

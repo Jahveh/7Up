@@ -36,14 +36,15 @@
 			var actionurl = e.currentTarget.action;
 			//do your own request an handle the results
 			$.ajax({
-				url : actionurl+'/100101',
+				//url : actionurl+'/100101',
+				url : actionurl,
 				type : 'post',
 				dataType : 'xml',
-				data : "<id>1111</id>",
+				data : "<account><accountName>testseven</accountName><password>nonumber1989</password></account>",
 			    contentType: 'application/xml',
 			    mimeType: 'application/xml',
 			    success: function(data) { 
-			        alert(data.id + " " + data.name);
+			        alert(data.email + " " + data.accountName);
 			    },
 			    error:function(data,status,er) { 
 			        alert("error: "+data+" status: "+status+" er:"+er);

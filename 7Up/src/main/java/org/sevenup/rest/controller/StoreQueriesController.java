@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @Produces(MediaType.APPLICATION_JSON)
-public class ShopsQueriesController {
+public class StoreQueriesController {
     @RequestMapping(method = RequestMethod.POST, value = "tiger")
     public ResponseEntity<Account> deleteAccount(@RequestBody Account account ) {
     	System.out.println(account.getAccountName());
