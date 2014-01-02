@@ -1,5 +1,5 @@
 package org.sevenup.core.domain.category;
 
-public class KidsCategory implements Category {
+public class KidsCategory extends CustomerCategory {
 
 }

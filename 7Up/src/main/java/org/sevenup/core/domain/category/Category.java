@@ -1,8 +1,10 @@
 package org.sevenup.core.domain.category;
 /**
- * Steven
+ * Steven.xu
  * 
  */
-public interface Category {
-
+public abstract class Category {
+	private String categoryNumber;
+	private String categoryName;
+	
 }
