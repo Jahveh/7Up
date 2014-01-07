@@ -1,6 +1,6 @@
 package org.sevenup.core.domain.order;
 
-import org.sevenup.core.domain.help.account.Account;
+import org.sevenup.core.domain.common.Account;
 
 import java.util.*;
 

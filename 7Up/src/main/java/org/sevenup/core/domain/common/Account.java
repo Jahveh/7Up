@@ -1,4 +1,4 @@
-package org.sevenup.core.domain.help.account;
+package org.sevenup.core.domain.common;
 
 /**
  * 
@@ -6,7 +6,8 @@ package org.sevenup.core.domain.help.account;
  * 
  */
 public abstract class Account {
-	
+	private String accountId;
+	private String accountNUmber;
 	private String accountName;
 	// User Name for show
 	private String firstName;
@@ -22,6 +23,8 @@ public abstract class Account {
 	private String country;
 	private String postCode;
 
+	private Privilege privilege;
+	
 	public String getAccountName() {
 		return accountName;
 	}
@@ -100,6 +103,30 @@ public abstract class Account {
 
 	public void setPostCode(String postCode) {
 		this.postCode = postCode;
+	}
+
+	public String getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
+	}
+
+	public String getAccountNUmber() {
+		return accountNUmber;
+	}
+
+	public void setAccountNUmber(String accountNUmber) {
+		this.accountNUmber = accountNUmber;
+	}
+
+	public Privilege getPrivilege() {
+		return privilege;
+	}
+
+	public void setPrivilege(Privilege privilege) {
+		this.privilege = privilege;
 	}
 
 }
