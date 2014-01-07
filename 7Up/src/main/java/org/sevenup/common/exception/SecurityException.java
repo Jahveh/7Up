@@ -3,14 +3,15 @@ package org.sevenup.common.exception;
 
 import java.util.Calendar;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * This class models a security exception for the 7Up error handling framework. This 
  * exception will be created and thrown by the Portal and Enterprise tiers when a security error has
  * occurred.
- *
- * 
- * @version $Revision: 0.1$
+ * @author steven.xu
  */
+@XmlRootElement
 public class SecurityException extends RuntimeException {
     /**  */
     private static final long serialVersionUID = 1L;

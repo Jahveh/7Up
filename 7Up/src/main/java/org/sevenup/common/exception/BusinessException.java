@@ -2,14 +2,15 @@ package org.sevenup.common.exception;
 
 import java.util.Calendar;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * This class models a business exception for the 7Up error handling framework. 
  * This exception class will be created and thrown by the Portal and Enterprise service layers
  * in cases where an error occurs during the processing of business logic.
- *
- * 
- * @version $Revision: 0.1$
+ * @author steven.xu
  */
+@XmlRootElement
 public class BusinessException extends Exception {
     /**  */
     private static final long serialVersionUID = 1L;

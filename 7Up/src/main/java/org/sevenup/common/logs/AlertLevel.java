@@ -2,10 +2,8 @@ package org.sevenup.common.logs;
 
 
 /**
- * This lists the alert levels allowed by the Cardinal Alerter
- *
- * @author Jason Cardillo
- * @version $Revision: 0.1$
+ * This lists the alert levels allowed by the 7Up Alerter
+ * @author steven.xu
  */
 public final class AlertLevel {
     public final static String WARNING = "Warning";

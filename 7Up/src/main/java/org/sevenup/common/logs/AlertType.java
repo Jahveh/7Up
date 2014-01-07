@@ -2,10 +2,8 @@ package org.sevenup.common.logs;
 
 
 /**
- * This lists the alert types allowed by the Cardinal Alerter
- *
- * @author Jason Cardillo
- * @version $Revision: 0.1$
+ * This lists the alert types allowed by the 7Up Alerter
+ * @author steven.xu
  */
 public final class AlertType {
     //	 Constant Variables

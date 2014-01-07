@@ -3,7 +3,7 @@ package org.sevenup.core.repository;
 import java.util.List;
 import java.util.UUID;
 
-import org.sevenup.core.domain.product.Product;
+import org.sevenup.core.domain.common.Product;
 /**
  * 
  * @author steven

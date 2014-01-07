@@ -2,6 +2,8 @@ package org.sevenup.core.domain.category;
 
 import java.util.Vector;
 
+import org.sevenup.core.domain.common.Category;
+
 /**
  * Category based on customers
  * @author steven.xu

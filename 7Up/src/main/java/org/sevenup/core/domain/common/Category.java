@@ -1,4 +1,4 @@
-package org.sevenup.core.domain.category;
+package org.sevenup.core.domain.common;
 /**
  * Steven.xu
  * 

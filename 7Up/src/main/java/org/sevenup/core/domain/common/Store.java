@@ -1,4 +1,4 @@
-package org.sevenup.core.domain.help.stores;
+package org.sevenup.core.domain.common;
 
 /**
  * 
@@ -6,6 +6,7 @@ package org.sevenup.core.domain.help.stores;
  * 
  */
 public abstract class Store {
+	private String storeId;
 	private String storeNumber;
 	private String storeName;
 
@@ -70,6 +71,14 @@ public abstract class Store {
 
 	public void setLatitude(String latitude) {
 		this.latitude = latitude;
+	}
+
+	public String getStoreId() {
+		return storeId;
+	}
+
+	public void setStoreId(String storeId) {
+		this.storeId = storeId;
 	}
 
 }

@@ -4,6 +4,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.sevenup.rest.domain.Account;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -28,7 +29,7 @@ public class StoreQueriesController {
     	System.out.println(account.getPassword());
 //    	Account account = new Account();
 //    	System.out.println(account.getPassword()+"---"+account.getEmail());
-       return new ResponseEntity<Account>(account, HttpStatus.OK);
+       return new ResponseEntity<Account>(HttpStatus.BAD_GATEWAY);
     }
     
     @RequestMapping(method = RequestMethod.POST, value = "tiger/{id}")
@@ -37,4 +38,5 @@ public class StoreQueriesController {
     	Account account = new Account();
         return new ResponseEntity<Account>(account, HttpStatus.OK);
     }
+
 }
