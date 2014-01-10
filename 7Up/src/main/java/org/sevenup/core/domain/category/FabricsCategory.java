@@ -1,6 +1,7 @@
 package org.sevenup.core.domain.category;
 
-import java.util.Vector;
+import java.util.List;
+import java.util.Map;
 
 import org.sevenup.core.domain.common.Category;
 
@@ -10,13 +11,13 @@ import org.sevenup.core.domain.common.Category;
  *
  */
 public class FabricsCategory extends Category{
-	private Vector<CustomerCategory> customerCategoryList;
+	private Map<Integer, List<Category>> subcategoryMap;
 
-	public Vector<CustomerCategory> getCustomerCategoryList() {
-		return customerCategoryList;
+	public Map<Integer, List<Category>> getSubcategoryMap() {
+		return subcategoryMap;
 	}
 
-	public void setCustomerCategoryList(Vector<CustomerCategory> customerCategoryList) {
-		this.customerCategoryList = customerCategoryList;
+	public void setSubcategoryMap(Map<Integer, List<Category>> subcategoryMap) {
+		this.subcategoryMap = subcategoryMap;
 	}
 }
