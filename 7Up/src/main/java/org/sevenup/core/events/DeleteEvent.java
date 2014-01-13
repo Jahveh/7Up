@@ -1,4 +1,5 @@
 package org.sevenup.core.events;
 
-public interface DeleteEvent {
+public abstract class DeleteEvent {
+	
 }

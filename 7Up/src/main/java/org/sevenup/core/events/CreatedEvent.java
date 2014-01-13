@@ -1,4 +1,4 @@
 package org.sevenup.core.events;
 
-public abstract class CreatedEvent {
+public interface CreatedEvent {
 }
