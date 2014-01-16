@@ -1,61 +1,64 @@
 package org.sevenup.core.events.store;
 
-import java.util.UUID;
 
 import org.sevenup.core.domain.common.Store;
 import org.sevenup.core.events.DeletedEvent;
 
-
+/**
+ * 
+ * @author steven.xu
+ *
+ */
 public class StoreDeletedEvent extends DeletedEvent {
-	private UUID key;
+	private String key;
 	private Store store;
 	private boolean deletionCompleted;
 
-	public StoreDeletedEvent(UUID key) {
-		super();
-		this.setKey(key);
+	public StoreDeletedEvent(String key) {
+		this.key = key;
 	}
 
-	public StoreDeletedEvent(UUID key, Store store) {
-		super();
-		this.setKey(key);
-		this.setStore(store);
+	public StoreDeletedEvent(String key, Store store) {
+		this.key = key;
+		this.store = store;
 	}
 
-	public static StoreDeletedEvent deletionForbidden(UUID key, Store store) {
+	/**
+	 * If deletion is forbidden
+	 * @param key
+	 * @param store
+	 * @return
+	 */
+	public static StoreDeletedEvent deletionForbidden(String key, Store store) {
 		StoreDeletedEvent event = new StoreDeletedEvent(key, store);
 		event.entityFound = true;
 		event.setDeletionCompleted(false);
 		return event;
 	}
 
-	public static StoreDeletedEvent notFound(UUID key) {
+	/**
+	 *  If this record not found by this key
+	 * @param key
+	 * @return
+	 */
+	public static StoreDeletedEvent notFound(String key) {
 		StoreDeletedEvent event = new StoreDeletedEvent(key);
 		event.entityFound = false;
 		return event;
 	}
-
-	public UUID getKey() {
+	/*
+	 * ************** all the event should just return some state************************
+	 * **************      set state just by constructor         ************************
+	 */
+	public String getKey() {
 		return key;
-	}
-
-	public void setKey(UUID key) {
-		this.key = key;
 	}
 
 	public Store getStore() {
 		return store;
 	}
 
-	public void setStore(Store store) {
-		this.store = store;
-	}
-
 	public boolean isDeletionCompleted() {
 		return deletionCompleted;
-	}
-
-	public void setDeletionCompleted(boolean deletionCompleted) {
-		this.deletionCompleted = deletionCompleted;
 	}
 }

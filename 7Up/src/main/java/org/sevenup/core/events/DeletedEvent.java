@@ -2,16 +2,7 @@ package org.sevenup.core.events;
 
 public abstract class DeletedEvent {
 	protected boolean entityFound = true;
-	protected boolean deletionCompleted;
-
-	public static DeletedEvent deletionForbidden() {
-		return null;
-	}
-
-	public static DeletedEvent notFound() {
-		return null;
-
-	}
+	protected boolean deletionCompleted = false;
 
 	public boolean isEntityFound() {
 		return entityFound;

@@ -1,10 +1,9 @@
-package org.sevenup.core.domain.help.stores;
+package org.sevenup.core.domain.store;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.sevenup.core.domain.common.Store;
-
 @XmlRootElement
-public class HotWindStore extends Store{
+public class SevenUpStore extends Store{
 
 }

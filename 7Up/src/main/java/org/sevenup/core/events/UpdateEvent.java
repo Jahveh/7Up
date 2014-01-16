@@ -1,4 +1,4 @@
 package org.sevenup.core.events;
 
-public interface UpdateEvent {
+public abstract class UpdateEvent {
 }

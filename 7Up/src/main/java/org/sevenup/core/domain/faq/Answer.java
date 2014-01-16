@@ -1,4 +1,4 @@
-package org.sevenup.core.domain.help.faq;
+package org.sevenup.core.domain.faq;
 
 import java.util.List;
 

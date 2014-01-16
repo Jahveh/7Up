@@ -1,4 +1,4 @@
-package org.sevenup.core.domain.help.account;
+package org.sevenup.core.domain.account;
 
 import org.sevenup.core.domain.common.Account;
 

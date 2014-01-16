@@ -1,4 +1,8 @@
 package org.sevenup.core.events;
-
-public class RequestReadEvent {
+/**
+ * 
+ * @author steven.xu
+ *
+ */
+public abstract class RequestReadEvent {
 }

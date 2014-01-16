@@ -1,18 +1,20 @@
 package org.sevenup.core.events.store;
 
-import java.util.UUID;
 
 import org.sevenup.core.events.DeleteEvent;
-
+/**
+ * 
+ * @author steven.xu
+ *
+ */
 public class DeleteStoreEvent extends DeleteEvent{
-	private final UUID key;
+	private final String key;
 
-	public DeleteStoreEvent(UUID key) {
-		super();
+	public DeleteStoreEvent(String key) {
 		this.key = key;
 	}
 
-	public UUID getKey() {
+	public String getKey() {
 		return key;
 	}
 }
